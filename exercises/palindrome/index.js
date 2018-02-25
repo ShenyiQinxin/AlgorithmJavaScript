@@ -7,20 +7,20 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-/*function palindrome(str) {
+/*one without reverse() 
+[0,10,14] is every value greater than 5
+array.every( (val)=>val>5 ) */
+function palindrome(str) {
 	return str.split('').every((char, i) => {
-		return char === str[str.length -i -1];
+		return char === str[str.length-i-1];
 	});
-	return str.split('').every(
-		(char, i) => char === str[str.length - i - 1]
-	);
-}*/
+}
 
 module.exports = palindrome;
 
 
 // the staight forward one
-function palindrome(str) {
+/*function palindrome(str) {
+	return str === str.split('').reverse().join('');
 	
-	
-}
+}*/
